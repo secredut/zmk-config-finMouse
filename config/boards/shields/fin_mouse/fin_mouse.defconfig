@@ -1,0 +1,13 @@
+if SHIELD_FIN_MOUSE
+
+config ZMK_MOUSE
+    default y
+
+config ZMK_BLE_CLEAR_BONDS_ON_START
+    default n
+
+# 보조 크리스탈(32.768kHz)이 없는 경우 내부 시계 사용 (필수!)
+config CLOCK_CONTROL_NRF_K32SRC_RC
+    default y
+
+endif
