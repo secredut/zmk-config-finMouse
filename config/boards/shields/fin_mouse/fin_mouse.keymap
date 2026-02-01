@@ -5,7 +5,6 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-    /* [매크로] 페어링 모드 진입 (기존 연결 끊고 대기) */
     macros {
         bt_pair: bt_pairing_mode {
             compatible = "zmk,behavior-macro";
@@ -15,15 +14,14 @@
         };
     };
 
-    /* [동작] 짧게=전원(Sleep), 길게=페어링 초기화 */
     behaviors {
         td_pwr: tap_dance_power_pair {
             compatible = "zmk,behavior-hold-tap";
             label = "PWR_PAIR";
             #binding-cells = <2>;
-            tapping-term-ms = <1500>;    /* 1.5초 꾹 누르면 페어링 */
+            tapping-term-ms = <1500>;
             flavor = "hold-preferred";
-            bindings = <&bt_pair>, <&soft_off>; /* <길게>, <짧게> */
+            bindings = <&bt_pair>, <&soft_off>;
         };
     };
 
@@ -32,9 +30,9 @@
 
         default_layer {
             bindings = <
-                &mkp LCLK      /* 0번: 좌클릭 (P1.13) */
-                &mkp RCLK      /* 1번: 우클릭 (P1.14) */
-                &td_pwr 0 0   /* 2번: 블루투스/전원 (P1.12) */
+                &mkp LCLK
+                &mkp RCLK
+                &td_pwr 0 0
             >;
         };
     };
