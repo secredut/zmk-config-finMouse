@@ -32,8 +32,8 @@
 
         default_layer {
             bindings = <
-                &mkp MB1      /* 0번: 좌클릭 (P1.13) */
-                &mkp MB2      /* 1번: 우클릭 (P1.14) */
+                &mkp LCLK      /* 0번: 좌클릭 (P1.13) */
+                &mkp RCLK      /* 1번: 우클릭 (P1.14) */
                 &td_pwr 0 0   /* 2번: 블루투스/전원 (P1.12) */
             >;
         };
