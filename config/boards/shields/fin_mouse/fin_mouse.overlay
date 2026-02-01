@@ -3,6 +3,7 @@
 /{
     chosen {
         zmk,kscan = &kscan0;
+        zmk,input-listeners = <&trackpad>;
     };
 
     kscan0: kscan {
