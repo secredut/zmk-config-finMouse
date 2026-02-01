@@ -19,7 +19,6 @@
     };
 };
 
-/* SPI 핀 설정 (P0.02, P0.04, P0.03) */
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
@@ -46,7 +45,6 @@
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
     
-    /* CS 핀: P0.05 */
     cs-gpios = <&gpio0 5 GPIO_ACTIVE_LOW>; 
 
     trackpad: trackpad@0 {
@@ -55,7 +53,6 @@
         spi-max-frequency = <2000000>;
         status = "okay";
         
-        /* DR (Data Ready) 핀: P1.11 */
         data-ready-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
 };
