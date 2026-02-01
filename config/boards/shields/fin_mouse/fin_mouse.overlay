@@ -53,6 +53,6 @@
         status = "okay";
         
         /* DR (Data Ready) 핀: P1.11 */
-        irq-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        data-ready-gpios = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
 };
